@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="key-container key">
+            <h4>Key</h4>
+            <p id="key-placeholder">Press a key...</p>
+        </div>
+        <div class="key-container code">
+            <h4>Code</h4>
+            <p id="code-placeholder">Press a key...</p>
+        </div>
+        <div class="key-container keyCode">
+            <h4>Key Code</h4>
+            <p id="keyCode-placeholder">Press a key...</p>
+        </div>
+    </div>
+    
+    <script>
+        // JavaScript to update placeholders dynamically when a key is pressed
+        document.addEventListener("keydown", (event) => {
+            document.getElementById("key-placeholder").textContent = event.key;
+            document.getElementById("code-placeholder").textContent = event.code;
+            document.getElementById("keyCode-placeholder").textContent = event.keyCode;
+        });
+    </script>
+    
+<script src="assets.js"></script>
+</body>
+</html>
